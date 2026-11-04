@@ -1,0 +1,36 @@
+{
+  "format": 2,
+  "version": "0.1.0",
+  "author": "mo",
+  "license": "GPL-3.0-or-later",
+  "api": "1.9",
+  "games": {
+    "rac1": [
+      "pal",
+      "ntsc"
+    ]
+  },
+  "id": "cutscene-manager",
+  "name": "Cutscene Manager",
+  "description": "Automatically skips repeated or all in-level cutscenes after a configurable minimum number of frames.",
+  "settings": [
+    {
+      "key": "mode",
+      "name": "Skip mode: 0 off, 1 repeats, 2 all",
+      "type": "int",
+      "default": 1,
+      "min": 0,
+      "max": 2,
+      "step": 1
+    },
+    {
+      "key": "min_frames",
+      "name": "Minimum scene frames before skip",
+      "type": "int",
+      "default": 45,
+      "min": 0,
+      "max": 600,
+      "step": 15
+    }
+  ]
+}
