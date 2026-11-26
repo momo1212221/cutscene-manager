@@ -1,6 +1,6 @@
 {
   "format": 2,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Moritz Wallinger",
   "license": "GPL-3.0-or-later",
   "api": "1.9",
@@ -8,6 +8,11 @@
     "rac1": [
       "pal",
       "ntsc"
+    ],
+    "rac2": [
+      "ntsc",
+      "pal",
+      "ntsc2"
     ]
   },
   "id": "cutscene-manager",

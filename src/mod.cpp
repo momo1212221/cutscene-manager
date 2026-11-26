@@ -15,8 +15,8 @@ std::uint64_t scene_key(int level, int scene) {
 }
 
 void load(openrac::Mod& mod) {
-    if (mod.game() != "rac1" || !mod.has_scenes())
-        throw openrac::Error("Cutscene Manager requires RAC1 interface 1.9+");
+    if ((mod.game() != "rac1" && mod.game() != "rac2") || !mod.has_scenes())
+        throw openrac::Error("Cutscene Manager requires RAC1 or RAC2 interface 1.9+");
 
     const int mode = std::clamp(static_cast<int>(mod.setting<std::int64_t>("mode")), 0, 1);
     const int minimum = static_cast<int>(mod.setting<std::int64_t>("min_frames"));
@@ -94,4 +94,4 @@ void load(openrac::Mod& mod) {
                        : "safe-repeat scene skipping active");
 }
 
-OPENRAC_MOD_CPP("cutscene-manager", "0.2.0", load)
+OPENRAC_MOD_CPP("cutscene-manager", "0.2.1", load)
